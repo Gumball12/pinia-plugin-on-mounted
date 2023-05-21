@@ -4,6 +4,12 @@
 
 [![ci](https://github.com/Gumball12/pinia-plugin-on-mounted/actions/workflows/ci.yaml/badge.svg)](https://github.com/Gumball12/pinia-plugin-on-mounted/actions/workflows/ci.yaml) [![publish](https://github.com/Gumball12/pinia-plugin-on-mounted/actions/workflows/publish.yaml/badge.svg)](https://github.com/Gumball12/pinia-plugin-on-mounted/actions/workflows/publish.yaml) [![codecov](https://codecov.io/gh/Gumball12/pinia-plugin-on-mounted/branch/main/graph/badge.svg?token=NW28cSN2A2)](https://codecov.io/gh/Gumball12/pinia-plugin-on-mounted)
 
+> Don't worry about whether Pinia is initialized, just use your store.
+
+Safely using the Pinia store outside of components.
+
+There are some cases where you need to invoke callbacks when Pinia is mounted. This module can be used in such situations.
+
 ## 🚀 Quick Start
 
 ### 1. Install the plugin
@@ -33,6 +39,26 @@ onPiniaMounted(() => {
   // do something
 });
 ```
+
+## 📖 Use cases
+
+### 1. Don't care if Pinia is initialized
+
+```ts
+import { onPiniaMounted } from 'pinia-plugin-on-mounted';
+import { useUserStore } from './user';
+
+// Pinia initialization errors may occur
+// like "Uncaught Error: [🍍]: getActivePinia was called with no active Pinia. Did you forget to install pinia?"
+const userStore = useUserStore();
+
+onPiniaMounted(() => {
+  // No matter what you do
+  const userStore = useUserStore();
+});
+```
+
+You can use your store outside of the store without worrying about whether or not Pinia is initialized.
 
 ## 🌮 API
 
