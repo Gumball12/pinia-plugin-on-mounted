@@ -1,6 +1,6 @@
 {
   "name": "pinia-plugin-on-mounted",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Mounted hook in Pinia.",
   "author": {
     "name": "Gumball12",
