@@ -1,4 +1,6 @@
-# 🍍 pinia-plugin-on-mounted
+### If you need this hook, you're probably using Pinia incorrectly. [See this comment](https://github.com/vuejs/pinia/discussions/2224#discussioncomment-5968445)!
+
+# 🍍 [Deprecated] pinia-plugin-on-mounted
 
 [![npm bundle size](https://img.shields.io/bundlephobia/minzip/pinia-plugin-on-mounted)](https://www.npmjs.com/package/pinia-plugin-on-mounted) ![npm](https://img.shields.io/npm/dm/pinia-plugin-on-mounted) ![npm](https://img.shields.io/npm/v/pinia-plugin-on-mounted) [![changelog](https://img.shields.io/badge/CHANGELOG-gray)](./CHANGELOG.md)
 
